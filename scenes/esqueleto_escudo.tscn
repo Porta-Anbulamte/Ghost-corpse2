@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2xcfkrdlgbj1"]
+
+[ext_resource type="Script" uid="uid://c4cvh4n7e72fg" path="res://script/esqueleto_escudo.gd" id="1_n1uec"]
+[ext_resource type="Texture2D" uid="uid://bkt55kyhf7udx" path="res://assets/inimigos/esqueleto/Sans2.webp" id="2_c0wug"]
+[ext_resource type="PackedScene" uid="uid://cghifham4fuvg" path="res://scenes/ossinho.tscn" id="2_dnl80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0wug"]
+
+[node name="esqueleto escudo" type="CharacterBody2D" unique_id=1420861412 groups=["inimigo"]]
+script = ExtResource("1_n1uec")
+ossinho_scene = ExtResource("2_dnl80")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188307468]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_c0wug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674082050]
+scale = Vector2(3.7424457, 6.1230717)
+shape = SubResource("RectangleShape2D_c0wug")

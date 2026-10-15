@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://puue7i5v5bh6"]
+
+[ext_resource type="Texture2D" uid="uid://b7y6mfleg25ur" path="res://assets/bala/bittersweet memories.jpeg" id="1_27eus"]
+[ext_resource type="Script" uid="uid://dbo0lr31redrc" path="res://script/bala.gd" id="1_uu6iy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6iy"]
+
+[node name="bala" type="Area2D" unique_id=1644428353]
+script = ExtResource("1_uu6iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136560964]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_27eus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545451197]
+shape = SubResource("RectangleShape2D_uu6iy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

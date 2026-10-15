@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cghifham4fuvg"]
+
+[ext_resource type="Script" uid="uid://cixjq8tvo3bba" path="res://script/ossinho.gd" id="1_casji"]
+[ext_resource type="Texture2D" uid="uid://dwre8x3t4w7n" path="res://assets/bala/osso.webp" id="1_l11vw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_casji"]
+size = Vector2(16, 36)
+
+[node name="ossinho" type="Area2D" unique_id=75007858 groups=["osso"]]
+script = ExtResource("1_casji")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1726155754]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_l11vw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1766779179]
+position = Vector2(0, -1)
+scale = Vector2(0.34797537, 0.345859)
+shape = SubResource("RectangleShape2D_casji")
