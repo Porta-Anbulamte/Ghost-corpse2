@@ -16,7 +16,7 @@
 script = ExtResource("1_yqjtg")
 label_salas = NodePath("CanvasLayer/sala")
 label_dano = NodePath("CanvasLayer2/vida")
-inimigos_cenas = Array[PackedScene]([ExtResource("2_u5sy4"), ExtResource("3_gee14"), ExtResource("4_lbhrr")])
+inimigos_cenas = Array[PackedScene]([ExtResource("4_lbhrr"), ExtResource("2_u5sy4"), ExtResource("3_gee14")])
 spawns = NodePath("spawn")
 porta = NodePath("porta")
 inicio = NodePath("inicioplayer")

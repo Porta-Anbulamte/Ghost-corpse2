@@ -1,1 +1,7 @@
 res://scenes/game.tscn
+res://scenes/fantasminha.tscn
+res://script/fantasminha.gd
+res://scenes/boss.tscn
+res://script/boss.gd
+res://script/game.gd
+res://script/bala.gd

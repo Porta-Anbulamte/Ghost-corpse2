@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var velocidade := 100
+@export var cura_cena: PackedScene
+@export var chance_cura := 0.3   # 30%
 var vida := 2
 var player: Node2D
 
@@ -24,4 +26,12 @@ func _physics_process(delta: float) -> void:
 func levar_dano(qtd: int) -> void:
 	vida -= qtd
 	if vida <= 0:
+		soltar_cura()
 		queue_free()
+
+func soltar_cura() -> void:
+	if cura_cena == null or randf() >= chance_cura:
+		return
+	var cura := cura_cena.instantiate() as Node2D
+	cura.position = position
+	get_parent().add_child.call_deferred(cura)

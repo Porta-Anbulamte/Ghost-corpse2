@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://rf1x2utuv610" path="res://assets/inimigos/fantasminhas/fantasma.png" id="1_ole6w"]
 [ext_resource type="Script" uid="uid://by8fofgjt05f" path="res://script/fantasminha.gd" id="1_q1ioa"]
+[ext_resource type="PackedScene" uid="uid://bgyktsxy0lara" path="res://scenes/cura.tscn" id="2_0ndte"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1ioa"]
 
 [node name="fantasminha" type="CharacterBody2D" unique_id=657976151 groups=["inimigo"]]
 script = ExtResource("1_q1ioa")
+cura_cena = ExtResource("2_0ndte")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2107653546]
 scale = Vector2(0.3, 0.3)

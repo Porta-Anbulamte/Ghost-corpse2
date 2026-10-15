@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://vj3stqfkl0yy"]
+
+[ext_resource type="PackedScene" uid="uid://cklj1y631lbrg" path="res://scenes/player.tscn" id="1_dlmty"]
+[ext_resource type="Script" uid="uid://bn7epmknmblap" path="res://script/boss.gd" id="1_jncid"]
+[ext_resource type="PackedScene" uid="uid://puue7i5v5bh6" path="res://scenes/bala.tscn" id="2_neq0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xd8r6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlmty"]
+
+[node name="boss" type="Node2D" unique_id=176240739]
+script = ExtResource("1_jncid")
+
+[node name="colisao" type="Node2D" parent="." unique_id=1544906250]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="colisao" unique_id=1416075376]
+position = Vector2(-41, 321)
+scale = Vector2(0.8883219, 3.5813503)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D" unique_id=1715768158]
+position = Vector2(5.6285906, -0.5584486)
+scale = Vector2(-4.051844, 9.182994)
+shape = SubResource("RectangleShape2D_xd8r6")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="colisao" unique_id=1924782333]
+position = Vector2(-41, 321)
+scale = Vector2(0.8883219, 3.5813503)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D6" unique_id=2059296590]
+position = Vector2(5.6285906, 183.17116)
+scale = Vector2(-4.051844, 9.182994)
+shape = SubResource("RectangleShape2D_xd8r6")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="colisao" unique_id=2006988351]
+position = Vector2(579.00006, -19)
+scale = Vector2(1.1830887, 1.3681169)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D3" unique_id=552838248]
+scale = Vector2(49.48612, -1.3916192)
+shape = SubResource("RectangleShape2D_dlmty")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="colisao" unique_id=160283175]
+position = Vector2(579.00006, -19)
+scale = Vector2(1.1830887, 1.3681169)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D5" unique_id=221091503]
+position = Vector2(989.782, 0)
+scale = Vector2(49.48612, -1.3916192)
+shape = SubResource("RectangleShape2D_dlmty")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="colisao" unique_id=1305104442]
+position = Vector2(1191, 325)
+scale = Vector2(0.9540047, 3.5640042)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D2" unique_id=824252574]
+position = Vector2(1171.902, 183.22087)
+scale = Vector2(-4.0800004, 9.181467)
+shape = SubResource("RectangleShape2D_xd8r6")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="colisao" unique_id=1523419452]
+position = Vector2(2302, 330)
+scale = Vector2(0.9540047, 3.5640042)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D8" unique_id=310987813]
+position = Vector2(3.0517578e-05, 1.9073486e-06)
+scale = Vector2(-4.0800004, 9.181467)
+shape = SubResource("RectangleShape2D_xd8r6")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="colisao" unique_id=213888410]
+position = Vector2(1753, 1310)
+scale = Vector2(1.1830887, 1.3681169)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D4" unique_id=1009732878]
+scale = Vector2(49.48612, -1.3916192)
+shape = SubResource("RectangleShape2D_dlmty")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="colisao" unique_id=1912993912]
+position = Vector2(576, 667)
+scale = Vector2(1.1830887, 1.3681169)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D7" unique_id=1111832818]
+position = Vector2(2.5357356, 469.98917)
+scale = Vector2(49.48612, -1.3916192)
+shape = SubResource("RectangleShape2D_dlmty")
+
+[node name="player" parent="." unique_id=917031592 instance=ExtResource("1_dlmty")]
+position = Vector2(1136, 135)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=702293378]
+position = Vector2(1128, 647)
+zoom = Vector2(0.485, 0.485)
+position_smoothing_speed = 3.0
+
+[node name="bala" parent="." unique_id=1644428353 instance=ExtResource("2_neq0i")]
+
+[connection signal="shoot" from="player" to="." method="_on_player_shoot"]
