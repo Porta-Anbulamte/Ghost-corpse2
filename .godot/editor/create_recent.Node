@@ -1,7 +1,7 @@
 CollisionShape2D
-ColorPicker
 Sprite2D
 Area2D
+ColorPicker
 Camera2D
 AnimatedSprite2D
 CharacterBody2D

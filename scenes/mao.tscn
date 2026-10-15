@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nxbwv8ssqn4n"]
+
+[ext_resource type="Texture2D" uid="uid://bu8gc2yycxbme" path="res://assets/partes do corpo/mao.png" id="1_g8kpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m0w8"]
+
+[node name="mao" type="Area2D" unique_id=1778525590]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219225489]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_g8kpn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36226046]
+scale = Vector2(2.2684767, 2.5416718)
+shape = SubResource("RectangleShape2D_4m0w8")
