@@ -5,10 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6iy"]
 
-[node name="bala" type="Area2D" unique_id=1644428353]
+[node name="bala" type="Area2D" unique_id=1644428353 groups=["limpavel"]]
 script = ExtResource("1_uu6iy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136560964]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136560964 groups=["limpavel"]]
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_27eus")
 

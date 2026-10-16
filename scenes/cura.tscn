@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_4m0w8"]
 radius = 57.07889
 
-[node name="cura" type="Area2D" unique_id=273903459]
+[node name="cura" type="Area2D" unique_id=273903459 groups=["limpavel"]]
 script = ExtResource("1_ogroy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1349856539]

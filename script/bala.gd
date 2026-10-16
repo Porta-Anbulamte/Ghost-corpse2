@@ -11,7 +11,7 @@ func setup(pos: Vector2, dir: Vector2):
 	direcao = dir
 
 func _physics_process(delta: float) -> void:
-	position +=direcao * 300 * delta
+	position +=direcao * 400 * delta
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("inimigo"):

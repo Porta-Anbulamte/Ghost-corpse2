@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1792072540
+::res://::1792149569
 README.md::TextFile::-1::1791935695::0::1::::<><><>0<>0<><>::
 ::res://assets/::1792072769
 ::res://assets/bala/::1791935695
@@ -13,30 +13,31 @@ Sans2.webp::CompressedTexture2D::3129407943635519485::1791935695::1791935695::1:
 sans.png::CompressedTexture2D::1185022462885363754::1791935695::1791935695::1::::<><><>0<>0<>3b8b8cc08f545b15c15385ab333d94ad<>res://.godot/imported/sans.png-4de76034e49452ce4afa6bcd98256196.ctex::
 ::res://assets/inimigos/fantasminhas/::1791935695
 fantasma.png::CompressedTexture2D::1205153395605994193::1791935695::1791935695::1::::<><><>0<>0<>d977721d5a967dbeec5b75e2dc38f97f<>res://.godot/imported/fantasma.png-fc7e2bc3def06a9a8f9beb6e91ed9fbb.ctex::
-::res://assets/partes do corpo/::1792072779
+::res://assets/partes do corpo/::1792072784
 mao.png::CompressedTexture2D::3858691352181918200::1792072755::1792072784::1::::<><><>0<>0<>ec86287724dff363e743a4402f36c985<>res://.godot/imported/mao.png-10ba9d0fba9c94dee6fbfd6ec9ba7e89.ctex::
 ::res://assets/player/::1791935695
 bob.webp::CompressedTexture2D::7890951228326041132::1791935695::1791935695::1::::<><><>0<>0<>b74e712f008ecd22bf035fa1c4ace973<>res://.godot/imported/bob.webp-7ee766c77def90c876710d52c208531e.ctex::
-::res://scenes/::1792066230
-bala.tscn::PackedScene::1095343387180576401::1791935695::0::1::::<><><>0<>0<><>::uid://b7y6mfleg25ur::::res://assets/bala/bittersweet memories.jpeg<>uid://dbo0lr31redrc::::res://script/bala.gd
+::res://scenes/::1792149552
+bala.tscn::PackedScene::1095343387180576401::1792149552::0::1::::<><><>0<>0<><>::uid://b7y6mfleg25ur::::res://assets/bala/bittersweet memories.jpeg<>uid://dbo0lr31redrc::::res://script/bala.gd
 bala_sangue.tscn::PackedScene::7659649228878024128::1792066101::0::1::::<><><>0<>0<><>::uid://dbo0lr31redrc::::res://script/bala.gd<>uid://b7y6mfleg25ur::::res://assets/bala/bittersweet memories.jpeg
 boss.tscn::PackedScene::1494278359174493124::1792065402::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://bn7epmknmblap::::res://script/boss.gd<>uid://puue7i5v5bh6::::res://scenes/bala.tscn
-cura.tscn::PackedScene::2857740893705683306::1791979036::0::1::::<><><>0<>0<><>::uid://cks78eq0fbv5g::::res://script/cura.gd<>uid://0bng5xa7udww::::res://assets/cura/cura.webp
+cura.tscn::PackedScene::2857740893705683306::1792149489::0::1::::<><><>0<>0<><>::uid://cks78eq0fbv5g::::res://script/cura.gd<>uid://0bng5xa7udww::::res://assets/cura/cura.webp
 esqueleto.tscn::PackedScene::5868311061367685350::1791974931::0::1::::<><><>0<>0<><>::uid://q5be8y86ai1g::::res://assets/inimigos/esqueleto/sans.png<>uid://c1svklrav4d6b::::res://script/esqueleto.gd<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn
 esqueleto_escudo.tscn::PackedScene::6715551748557928528::1791935695::0::1::::<><><>0<>0<><>::uid://c4cvh4n7e72fg::::res://script/esqueleto_escudo.gd<>uid://bkt55kyhf7udx::::res://assets/inimigos/esqueleto/Sans2.webp<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn
 fantasminha.tscn::PackedScene::4398531672700172586::1792066230::0::1::::<><><>0<>0<><>::uid://rf1x2utuv610::::res://assets/inimigos/fantasminhas/fantasma.png<>uid://by8fofgjt05f::::res://script/fantasminha.gd<>uid://bgyktsxy0lara::::res://scenes/cura.tscn
-game.tscn::PackedScene::363023252303796330::1792063989::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://cs7l5ekaml1el::::res://script/game.gd<>uid://cpuwhxbhxyr7s::::res://scenes/esqueleto.tscn<>uid://c2xcfkrdlgbj1::::res://scenes/esqueleto_escudo.tscn<>uid://b3wxf6frwap6q::::res://scenes/fantasminha.tscn<>uid://518x7j1kh4ol::::res://scenes/porta.tscn<>uid://cudmo625v2f03::::res://script/spawn.gd
-ossinho.tscn::PackedScene::5208920106652121240::1791975006::0::1::::<><><>0<>0<><>::uid://cixjq8tvo3bba::::res://script/ossinho.gd<>uid://dwre8x3t4w7n::::res://assets/bala/osso.webp
+game.tscn::PackedScene::363023252303796330::1792149414::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://cs7l5ekaml1el::::res://script/game.gd<>uid://b3wxf6frwap6q::::res://scenes/fantasminha.tscn<>uid://518x7j1kh4ol::::res://scenes/porta.tscn<>uid://cudmo625v2f03::::res://script/spawn.gd<>uid://nxbwv8ssqn4n::::res://scenes/mao.tscn
+mao.tscn::PackedScene::960036814907905339::1792073039::0::1::::<><><>0<>0<><>::uid://bu8gc2yycxbme::::res://assets/partes do corpo/mao.png
+ossinho.tscn::PackedScene::5208920106652121240::1792149361::0::1::::<><><>0<>0<><>::uid://cixjq8tvo3bba::::res://script/ossinho.gd<>uid://dwre8x3t4w7n::::res://assets/bala/osso.webp
 player.tscn::PackedScene::5498032152394320004::1791979005::0::1::::<><><>0<>0<><>::uid://lsu3kllj4wpj::::res://script/player.gd<>uid://dkoo2w2qsyyi3::::res://assets/player/bob.webp
 porta.tscn::PackedScene::2161385560613069491::1791979195::0::1::::<><><>0<>0<><>::uid://dahux4kyr613v::::res://script/porta.gd
-::res://script/::1792066229
+::res://script/::1792149361
 bala.gd::GDScript::7259890689181963968::1792066229::0::1::::<>Area2D<><>0<>0<><>::
 boss.gd::GDScript::3365206040332068643::1792065402::0::1::::<>Node2D<><>0<>0<><>::
 cura.gd::GDScript::5513890714259893454::1791979005::0::1::::<>Area2D<><>0<>0<><>::
 esqueleto.gd::GDScript::6636203620382998819::1791935695::0::1::::<>CharacterBody2D<><>0<>0<><>::
 esqueleto_escudo.gd::GDScript::6813735690522870428::1791935695::0::1::::<>CharacterBody2D<><>0<>0<><>::
 fantasminha.gd::GDScript::121747242802625165::1792063989::0::1::::<>CharacterBody2D<><>0<>0<><>::
-game.gd::GDScript::6103022327296219155::1792065379::0::1::::<>Node2D<><>0<>0<><>::
+game.gd::GDScript::6103022327296219155::1792149361::0::1::::<>Node2D<><>0<>0<><>::
 ossinho.gd::GDScript::5382409594067005510::1791935695::0::1::::<>Area2D<><>0<>0<><>::
 player.gd::GDScript::810500964415431031::1791979005::0::1::::<>CharacterBody2D<><>0<>0<><>::
 porta.gd::GDScript::7174969648212479165::1791935695::0::1::::<>Area2D<><>0<>0<><>::

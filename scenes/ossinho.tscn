@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_casji"]
 size = Vector2(16, 36)
 
-[node name="ossinho" type="Area2D" unique_id=75007858 groups=["osso"]]
+[node name="ossinho" type="Area2D" unique_id=75007858 groups=["limpavel"]]
 script = ExtResource("1_casji")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1726155754]

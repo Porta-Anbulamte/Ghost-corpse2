@@ -9,7 +9,7 @@ var bala_scene = preload("res://scenes/bala.tscn")
 @export var porta: Area2D
 @export var inicio: Marker2D
 var sala:=0
-var vivos := 0 
+var vivos := 0
 
 func _ready() -> void:
 	porta.player_entrou.connect(_on_porta_player_entrou)
@@ -19,7 +19,7 @@ func _ready() -> void:
 func iniciar_rodada() -> void:
 	ativar_porta(false)
 
-	var pontos := spawns.pontos_sorteados()
+	var pontos := spawns.pontos_sorteados(sala)
 	var total := mini(quantidade, pontos.size())
 	vivos = total
 
@@ -42,7 +42,7 @@ func ativar_porta(ativa: bool) -> void:
 	porta.set_deferred("monitoring", ativa)
 
 func _on_porta_player_entrou(player: Node2D) -> void:
-	get_tree().call_group("osso","queue_free")
+	get_tree().call_group("limpavel","queue_free")
 	player.global_position = inicio.global_position
 	quantidade += 1
 	sala += 1

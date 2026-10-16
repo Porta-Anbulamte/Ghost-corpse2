@@ -5,9 +5,12 @@ signal inimigo_nasceu(inimigo: Node2D)
 
 @export var atraso := 1.0
 @export var aviso_textura: Texture2D   # o desenho do aviso, você coloca depois
+@export var sala_minima_tardios := 5
 
-func pontos_sorteados() -> Array:
-	var pontos := get_children()
+func pontos_sorteados(sala_atual: int) -> Array:
+	var pontos := get_children().filter(func(p):
+		return not p.is_in_group("spawn_tardio") or sala_atual >= sala_minima_tardios
+	)
 	pontos.shuffle()
 	return pontos
 

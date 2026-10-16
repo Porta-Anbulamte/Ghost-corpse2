@@ -13,6 +13,10 @@ var tempo := 0.0
 @onready var y_inicial: float = sprite.position.y
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("dash"):
+		speed = 500
+	else:
+		speed = 330
 	get_input()
 	direcao = Input.get_vector("left", "right", "up", "down")
 	velocity = direcao * speed
