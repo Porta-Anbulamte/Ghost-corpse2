@@ -1,9 +1,6 @@
-res://scenes/bala.tscn
-res://scenes/cura.tscn
-res://scenes/game.tscn
-res://script/game.gd
-res://script/spawn.gd
-res://scenes/ossinho.tscn
 res://script/player.gd
 res://scenes/player.tscn
-res://script/bala.gd
+res://scenes/fantasma.tscn
+res://script/fantasma.gd
+res://scenes/game.tscn
+res://scenes/fantasminha.tscn

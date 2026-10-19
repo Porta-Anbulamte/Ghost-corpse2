@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bwa4auqbq7bg3"]
+
+[ext_resource type="Script" uid="uid://6xdaja2mhhvc" path="res://script/fantasma.gd" id="1_t212r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk8gv"]
+
+[node name="fantasma" type="CharacterBody2D" unique_id=1412737934 groups=["inimigo"]]
+script = ExtResource("1_t212r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1698698343]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=685700177]
+scale = Vector2(3.0523362, 3.2154326)
+shape = SubResource("RectangleShape2D_hk8gv")

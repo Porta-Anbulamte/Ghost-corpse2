@@ -44,10 +44,8 @@ func _process(delta: float) -> void:
 	tempo += delta
 	$Sprite2D.position.y = sin(tempo * 5.0) * 10.0
 	
-	if direcao != Vector2.ZERO:
-		sprite.rotation = sin(tempo * 5.0) * deg_to_rad(5.0)
-	else:
-		sprite.rotation = lerp(sprite.rotation, 0.0, 7.0 * delta)
+	var alvo := direcao.x * deg_to_rad(12.0)
+	sprite.rotation = lerp(sprite.rotation, alvo, 10.0 * delta)
 
 func curar(qtd: int) -> void:
 	vida = mini(vida + qtd, vida_max)
