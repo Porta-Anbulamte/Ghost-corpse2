@@ -53,6 +53,12 @@ dash={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="parede"
+2d_render/layer_2="player"
+2d_render/layer_3="inimigos"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

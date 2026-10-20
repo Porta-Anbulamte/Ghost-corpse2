@@ -3,7 +3,7 @@ extends Area2D
 var direcao: Vector2
 
 func setup(pos: Vector2, dir: Vector2) -> void:
-	global_position = pos + dir * 70
+	global_position = pos + dir * 50 
 	direcao = dir
 
 func _ready() -> void:

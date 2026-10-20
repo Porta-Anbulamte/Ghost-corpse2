@@ -1,6 +1,14 @@
-res://script/game.gd
 res://scenes/esqueleto.tscn
-res://script/fantasma.gd
-res://scenes/fantasma.tscn
+res://script/esqueleto.gd
+res://scenes/bala.tscn
+res://scenes/mao.tscn
 res://scenes/player.tscn
+res://script/player.gd
+res://script/bala.gd
 res://scenes/ossinho.tscn
+res://scenes/game.tscn
+res://scenes/cura.tscn
+res://script/ossinho.gd
+res://script/game.gd
+res://scenes/fantasma.tscn
+res://script/fantasma.gd

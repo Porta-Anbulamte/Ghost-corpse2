@@ -10,6 +10,9 @@ var bala_scene = preload("res://scenes/bala.tscn")
 @export var inicio: Marker2D
 var sala:=0
 var vivos := 0
+@export var fade: ColorRect
+var trocando := false
+
 
 func _ready() -> void:
 	porta.player_entrou.connect(_on_porta_player_entrou)
@@ -42,12 +45,31 @@ func ativar_porta(ativa: bool) -> void:
 	porta.set_deferred("monitoring", ativa)
 
 func _on_porta_player_entrou(player: Node2D) -> void:
-	get_tree().call_group("limpavel","queue_free")
+	if trocando:
+		return
+	trocando = true
+	player.set_physics_process(false)   # trava o player durante o fade
+
+	# fade out (escurece)
+	var tween := create_tween()
+	tween.tween_property(fade, "modulate:a", 1.0, 0.4)
+	await tween.finished
+
+	# troca de sala com a tela preta
+	get_tree().call_group("limpavel", "queue_free")
 	player.global_position = inicio.global_position
 	quantidade += 1
 	sala += 1
 	atualizar_contador_sala()
 	iniciar_rodada()
+
+	# fade in (clareia)
+	tween = create_tween()
+	tween.tween_property(fade, "modulate:a", 0.0, 0.4)
+	await tween.finished
+
+	player.set_physics_process(true)
+	trocando = false
 
 func atualizar_contador_sala() -> void:
 	label_salas.text = "Salas: " + str(sala)

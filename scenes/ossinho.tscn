@@ -39,8 +39,8 @@ animations = [{
 "speed": 22.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_casji"]
-size = Vector2(16, 36)
+[sub_resource type="CircleShape2D" id="CircleShape2D_casji"]
+radius = 23.0
 
 [node name="ossinho" type="Area2D" unique_id=75007858 groups=["limpavel"]]
 script = ExtResource("1_casji")
@@ -48,9 +48,7 @@ script = ExtResource("1_casji")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1462630503]
 sprite_frames = SubResource("SpriteFrames_l26tr")
 autoplay = "default"
-frame_progress = 0.4057625
+frame_progress = 0.39747036
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1766779179]
-position = Vector2(0, -1)
-scale = Vector2(2.3404133, 1.5239834)
-shape = SubResource("RectangleShape2D_casji")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=147872719]
+shape = SubResource("CircleShape2D_casji")

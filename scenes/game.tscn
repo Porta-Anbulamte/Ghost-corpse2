@@ -7,14 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://b3wxf6frwap6q" path="res://scenes/fantasminha.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://518x7j1kh4ol" path="res://scenes/porta.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cudmo625v2f03" path="res://script/spawn.gd" id="5_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://nxbwv8ssqn4n" path="res://scenes/mao.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://bwa4auqbq7bg3" path="res://scenes/fantasma.tscn" id="9_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 
-[node name="game" type="Node2D" unique_id=1816255668 node_paths=PackedStringArray("label_salas", "label_dano", "spawns", "porta", "inicio")]
+[node name="game" type="Node2D" unique_id=1816255668 node_paths=PackedStringArray("label_salas", "label_dano", "spawns", "porta", "inicio", "fade")]
 script = ExtResource("1_yqjtg")
 label_salas = NodePath("CanvasLayer/sala")
 label_dano = NodePath("CanvasLayer2/vida")
@@ -22,6 +21,7 @@ inimigos_cenas = Array[PackedScene]([ExtResource("4_lbhrr"), ExtResource("3_gee1
 spawns = NodePath("spawn")
 porta = NodePath("porta")
 inicio = NodePath("inicioplayer")
+fade = NodePath("fade/Fade")
 
 [node name="colisao" type="Node2D" parent="." unique_id=1377144665]
 
@@ -78,7 +78,7 @@ position = Vector2(1050, 572)
 position = Vector2(574, 461)
 
 [node name="inicioplayer" type="Marker2D" parent="." unique_id=345563859]
-position = Vector2(574, 24)
+position = Vector2(575, 43)
 
 [node name="player" parent="." unique_id=917031592 instance=ExtResource("1_uwrxv")]
 position = Vector2(577, 41)
@@ -110,11 +110,25 @@ theme_override_font_sizes/font_size = 30
 text = "Vida: 3"
 metadata/_edit_use_anchors_ = true
 
-[node name="mao" parent="." unique_id=1778525590 instance=ExtResource("8_gee14")]
-position = Vector2(1344, 105)
+[node name="fade" type="CanvasLayer" parent="." unique_id=2107345508]
+layer = 10
+
+[node name="Fade" type="ColorRect" parent="fade" unique_id=741049494]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="fantasma" parent="." unique_id=1412737934 instance=ExtResource("9_0tnpc")]
-position = Vector2(319, 437)
+position = Vector2(310, 299)
 
 [connection signal="inimigo_nasceu" from="spawn" to="." method="_on_spawn_inimigo_nasceu"]
 [connection signal="dano" from="player" to="." method="_on_player_dano"]

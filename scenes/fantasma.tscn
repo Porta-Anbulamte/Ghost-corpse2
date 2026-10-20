@@ -5,6 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk8gv"]
 
 [node name="fantasma" type="CharacterBody2D" unique_id=1412737934 groups=["inimigo"]]
+light_mask = 0
+visibility_layer = 512
 script = ExtResource("1_t212r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1698698343]

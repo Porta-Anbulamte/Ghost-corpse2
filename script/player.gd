@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	direcao = Input.get_vector("left", "right", "up", "down")
 	velocity = direcao * speed
 	move_and_slide()
+	mao()
 	
 	if direcao.x > 0:
 		$Sprite2D.flip_h = true
@@ -50,3 +51,8 @@ func _process(delta: float) -> void:
 func curar(qtd: int) -> void:
 	vida = mini(vida + qtd, vida_max)
 	dano.emit(vida)
+
+func mao():
+	var dir :=get_local_mouse_position().normalized()
+	$mao.position = dir * 70
+	$mao.rotation = dir.angle() + deg_to_rad(-90)

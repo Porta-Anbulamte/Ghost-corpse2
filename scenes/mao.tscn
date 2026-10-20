@@ -1,15 +1,31 @@
 [gd_scene format=3 uid="uid://nxbwv8ssqn4n"]
 
-[ext_resource type="Texture2D" uid="uid://bu8gc2yycxbme" path="res://assets/partes do corpo/mao.png" id="1_g8kpn"]
+[ext_resource type="Texture2D" uid="uid://cbe32f7nasr68" path="res://assets/partes do corpo/maos_kkj.png" id="1_g8kpn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m0w8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fviye"]
+atlas = ExtResource("1_g8kpn")
+region = Rect2(0, 0, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0ct1"]
+atlas = ExtResource("1_g8kpn")
+region = Rect2(40, 0, 40, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wer0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fviye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0ct1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="mao" type="Area2D" unique_id=1778525590]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219225489]
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("1_g8kpn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36226046]
-scale = Vector2(2.2684767, 2.5416718)
-shape = SubResource("RectangleShape2D_4m0w8")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=756360507]
+sprite_frames = SubResource("SpriteFrames_wer0x")
+frame_progress = 0.3412637

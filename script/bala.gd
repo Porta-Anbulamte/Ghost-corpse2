@@ -7,7 +7,7 @@ func _ready() -> void:
 	queue_free()
 
 func setup(pos: Vector2, dir: Vector2):
-	position = pos + dir * 70
+	position = pos + dir * 100
 	direcao = dir
 
 func _physics_process(delta: float) -> void:

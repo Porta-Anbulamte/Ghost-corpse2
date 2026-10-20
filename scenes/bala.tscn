@@ -1,18 +1,56 @@
 [gd_scene format=3 uid="uid://puue7i5v5bh6"]
 
-[ext_resource type="Texture2D" uid="uid://b7y6mfleg25ur" path="res://assets/bala/bittersweet memories.jpeg" id="1_27eus"]
 [ext_resource type="Script" uid="uid://dbo0lr31redrc" path="res://script/bala.gd" id="1_uu6iy"]
+[ext_resource type="Texture2D" uid="uid://bn7kixuh30qtq" path="res://assets/bala/projeteis.webp" id="2_uu6iy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu6iy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mjn7"]
+atlas = ExtResource("2_uu6iy")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0bj5"]
+atlas = ExtResource("2_uu6iy")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4et1"]
+atlas = ExtResource("2_uu6iy")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ne2r"]
+atlas = ExtResource("2_uu6iy")
+region = Rect2(192, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d54wb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mjn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0bj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4et1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ne2r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uu6iy"]
 
 [node name="bala" type="Area2D" unique_id=1644428353 groups=["limpavel"]]
 script = ExtResource("1_uu6iy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136560964 groups=["limpavel"]]
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("1_27eus")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1870585062 groups=["limpavel"]]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_d54wb")
+autoplay = "default"
+frame_progress = 0.82736325
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545451197]
-shape = SubResource("RectangleShape2D_uu6iy")
+shape = SubResource("CircleShape2D_uu6iy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

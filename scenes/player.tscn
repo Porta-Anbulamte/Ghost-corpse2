@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lsu3kllj4wpj" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dkoo2w2qsyyi3" path="res://assets/player/bob.webp" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://cbe32f7nasr68" path="res://assets/partes do corpo/maos_kkj.png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_g2els")
@@ -40,9 +41,33 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(16, 16)
+size = Vector2(16, 17.32897)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 40, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(40, 0, 40, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="player" type="CharacterBody2D" unique_id=917031592 groups=["player"]]
+light_mask = 2
+visibility_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1155842511]
@@ -51,6 +76,12 @@ autoplay = "default"
 frame_progress = 0.57325757
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489617247]
-position = Vector2(2.3841858e-07, 1.5000014)
-scale = Vector2(3.055, 3.055)
+position = Vector2(2.3841858e-07, -0.5300002)
+scale = Vector2(3.735, 3.735)
 shape = SubResource("RectangleShape2D_g2els")
+
+[node name="mao" type="AnimatedSprite2D" parent="." unique_id=418368728]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_smehm")
+autoplay = "default"
+frame_progress = 0.7413216
