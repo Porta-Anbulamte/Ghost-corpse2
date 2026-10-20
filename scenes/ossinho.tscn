@@ -3,17 +3,54 @@
 [ext_resource type="Script" uid="uid://cixjq8tvo3bba" path="res://script/ossinho.gd" id="1_casji"]
 [ext_resource type="Texture2D" uid="uid://dwre8x3t4w7n" path="res://assets/bala/osso.webp" id="1_l11vw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_casji"]
+atlas = ExtResource("1_l11vw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2bsh"]
+atlas = ExtResource("1_l11vw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fts1"]
+atlas = ExtResource("1_l11vw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gmoj"]
+atlas = ExtResource("1_l11vw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l26tr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_casji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2bsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fts1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gmoj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 22.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_casji"]
 size = Vector2(16, 36)
 
 [node name="ossinho" type="Area2D" unique_id=75007858 groups=["limpavel"]]
 script = ExtResource("1_casji")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1726155754]
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("1_l11vw")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1462630503]
+sprite_frames = SubResource("SpriteFrames_l26tr")
+autoplay = "default"
+frame_progress = 0.4057625
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1766779179]
 position = Vector2(0, -1)
-scale = Vector2(0.34797537, 0.345859)
+scale = Vector2(2.3404133, 1.5239834)
 shape = SubResource("RectangleShape2D_casji")
