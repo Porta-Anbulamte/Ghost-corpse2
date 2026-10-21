@@ -11,6 +11,11 @@ var tiro = true
 var tempo := 0.0
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 @onready var y_inicial: float = sprite.position.y
+@onready var effeito = $hurt
+@onready var hurtTimer = $hurtTimer
+
+func _ready() -> void:
+	effeito.play("RESET")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("dash"):
@@ -36,21 +41,29 @@ func get_input():
 		tiro = true
 
 func levar_dano(qtd: int) -> void:
-	vida -= qtd
+	effeito.play("hurt")
 	dano.emit(vida)
+	vida -= qtd
 	if vida <= 0:
-		get_tree().reload_current_scene()
+		get_tree().reload_current_scene()	
+	hurtTimer.start()
+	await hurtTimer.timeout
+	effeito.play("RESET")	
+
 
 func _process(delta: float) -> void:
 	tempo += delta
 	$Sprite2D.position.y = sin(tempo * 5.0) * 10.0
-	
 	var alvo := direcao.x * deg_to_rad(12.0)
 	sprite.rotation = lerp(sprite.rotation, alvo, 10.0 * delta)
 
 func curar(qtd: int) -> void:
+	effeito.play("cura")
 	vida = mini(vida + qtd, vida_max)
 	dano.emit(vida)
+	hurtTimer.start()
+	await hurtTimer.timeout
+	effeito.play("RESET")	
 
 func mao():
 	var dir :=get_local_mouse_position().normalized()

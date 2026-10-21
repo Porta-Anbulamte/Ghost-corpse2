@@ -11,6 +11,8 @@ enum Estado { ANDANDO, MIRANDO, RECUPERANDO }
 var estado := Estado.ANDANDO
 var timer := 1.0
 @onready var animated_sprite = $Sprite2D
+@onready var efeito = $hurt
+@onready var tempodano = $Timerhurt
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
@@ -65,3 +67,7 @@ func levar_dano(qtd: int) -> void:
 	vida -= qtd
 	if vida <= 0:
 		morrer()
+	efeito.play("hurt")
+	tempodano.start()
+	await tempodano.timeout
+	efeito.play("RESET")

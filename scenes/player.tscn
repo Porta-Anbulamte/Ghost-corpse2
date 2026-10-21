@@ -35,7 +35,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 10.0
 }]
@@ -60,10 +60,80 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fjrip")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 10.0
 }]
+
+[sub_resource type="Animation" id="Animation_qhqgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/dano:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/cura:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.17266668, 0.74, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+resource_name = "cura"
+length = 0.19999999999999998
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/cura:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.17266668, 0.74, 0, 1), Color(0.17266668, 0.74, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "hurt"
+length = 0.19999999999999998
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/dano:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
+_data = {
+&"RESET": SubResource("Animation_qhqgy"),
+&"cura": SubResource("Animation_qlg0r"),
+&"hurt": SubResource("Animation_dqkch")
+}
 
 [node name="player" type="CharacterBody2D" unique_id=917031592 groups=["player"]]
 light_mask = 2
@@ -71,9 +141,27 @@ visibility_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1155842511]
+clip_children = 2
 sprite_frames = SubResource("SpriteFrames_fjrip")
 autoplay = "default"
-frame_progress = 0.57325757
+frame = 1
+frame_progress = 0.3817363
+
+[node name="dano" type="ColorRect" parent="Sprite2D" unique_id=1526096153]
+clip_children = 2
+anchors_preset = -1
+offset_left = -61.0
+offset_top = -97.0
+offset_right = 42.0
+offset_bottom = 86.0
+color = Color(1, 1, 1, 0)
+
+[node name="cura" type="ColorRect" parent="Sprite2D" unique_id=843776167]
+offset_left = -53.0
+offset_top = -98.0
+offset_right = 47.0
+offset_bottom = 78.0
+color = Color(0.17266668, 0.74, 0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489617247]
 position = Vector2(2.3841858e-07, -0.5300002)
@@ -85,3 +173,10 @@ rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_smehm")
 autoplay = "default"
 frame_progress = 0.7413216
+
+[node name="hurt" type="AnimationPlayer" parent="." unique_id=168442830]
+libraries/ = SubResource("AnimationLibrary_qlg0r")
+
+[node name="hurtTimer" type="Timer" parent="." unique_id=2077575856]
+wait_time = 0.2
+one_shot = true

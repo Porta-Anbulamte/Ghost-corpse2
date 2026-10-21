@@ -118,17 +118,18 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 2.0
-offset_right = 1.0
-offset_bottom = 2.0
+offset_left = -17.0
+offset_top = -12.0
+offset_right = -17.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0373527, 1.0712042)
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="fantasma" parent="." unique_id=1412737934 instance=ExtResource("9_0tnpc")]
-position = Vector2(310, 299)
+position = Vector2(1738, 87)
 
 [connection signal="inimigo_nasceu" from="spawn" to="." method="_on_spawn_inimigo_nasceu"]
 [connection signal="dano" from="player" to="." method="_on_player_dano"]

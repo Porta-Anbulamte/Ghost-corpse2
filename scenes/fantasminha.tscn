@@ -6,14 +6,65 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1ioa"]
 
+[sub_resource type="Animation" id="Animation_0ndte"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/dano:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2kpif"]
+resource_name = "dano"
+length = 0.19999999999999998
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/dano:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ka8p7"]
+_data = {
+&"RESET": SubResource("Animation_0ndte"),
+&"dano": SubResource("Animation_2kpif")
+}
+
 [node name="fantasminha" type="CharacterBody2D" unique_id=657976151 groups=["inimigo"]]
 script = ExtResource("1_q1ioa")
 cura_cena = ExtResource("2_0ndte")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2107653546]
+clip_children = 2
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ole6w")
+
+[node name="dano" type="ColorRect" parent="Sprite2D" unique_id=1872981973]
+offset_left = -360.0
+offset_top = -329.99997
+offset_right = 323.33337
+offset_bottom = 456.66666
+color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2060598897]
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_q1ioa")
+
+[node name="efeito" type="AnimationPlayer" parent="." unique_id=559546859]
+libraries/ = SubResource("AnimationLibrary_ka8p7")
+
+[node name="Timer1" type="Timer" parent="." unique_id=1080008806]

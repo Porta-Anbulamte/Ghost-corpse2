@@ -48,7 +48,7 @@ func _on_porta_player_entrou(player: Node2D) -> void:
 	if trocando:
 		return
 	trocando = true
-	player.set_physics_process(false)   # trava o player durante o fade
+	player.set_physics_process(false)
 
 	# fade out (escurece)
 	var tween := create_tween()

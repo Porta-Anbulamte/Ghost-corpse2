@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_66pj3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andando",
 "speed": 10.0
 }, {
@@ -108,7 +108,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xfuvt")
 }],
-"loop": true,
+"loop": 1,
 "name": &"atirando",
 "speed": 10.0
 }, {
@@ -116,7 +116,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kn64g")
 }],
-"loop": true,
+"loop": 1,
 "name": &"parado",
 "speed": 5.0
 }]
@@ -124,18 +124,70 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20qjs"]
 size = Vector2(12.714285, 33.240993)
 
+[sub_resource type="Animation" id="Animation_kn64g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qfxqt"]
+resource_name = "hurt"
+length = 0.19999999999999998
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gllnj"]
+_data = {
+&"RESET": SubResource("Animation_kn64g"),
+&"hurt": SubResource("Animation_qfxqt")
+}
+
 [node name="esqueleto" type="CharacterBody2D" unique_id=1625635569 groups=["inimigo"]]
 script = ExtResource("1_oxjr5")
 ossinho_scene = ExtResource("2_tlre5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1157966340]
+clip_children = 2
 position = Vector2(3, 31)
 sprite_frames = SubResource("SpriteFrames_qfxqt")
 animation = &"parado"
 frame_progress = 0.14972603
 offset = Vector2(-2.8571472, -22.857141)
 
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=2071303469]
+offset_left = -61.0
+offset_top = -92.0
+offset_right = 64.0
+offset_bottom = 60.0
+color = Color(1, 1, 1, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=834097323]
 position = Vector2(-1.4210855e-14, 17)
 scale = Vector2(3.802, 3.537)
 shape = SubResource("RectangleShape2D_20qjs")
+
+[node name="hurt" type="AnimationPlayer" parent="." unique_id=406563264]
+libraries/ = SubResource("AnimationLibrary_gllnj")
+
+[node name="Timerhurt" type="Timer" parent="." unique_id=1652571084]
+wait_time = 0.2

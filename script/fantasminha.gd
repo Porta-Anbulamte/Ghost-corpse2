@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var chance_cura := 0.3   # 30%
 var vida := 2
 var player: Node2D
+@onready var efeito = $efeito
+@onready var timer = $Timer1
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
@@ -24,6 +26,8 @@ func _physics_process(delta: float) -> void:
 			return
 
 func levar_dano(qtd: int) -> void:
+	efeito.play("dano")
+	timer.start()
 	vida -= qtd
 	if vida <= 0:
 		soltar_cura()
