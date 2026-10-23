@@ -6,12 +6,13 @@ var bala_scene = preload("res://scenes/bala.tscn")
 @export var inimigos_cenas: Array[PackedScene]
 @export var quantidade := 4
 @export var spawns: SpawnPontos
-@export var porta: Area2D
+@export var porta: Porta
 @export var inicio: Marker2D
 var sala:=0
 var vivos := 0
 @export var fade: ColorRect
 var trocando := false
+
 
 
 func _ready() -> void:
@@ -41,8 +42,7 @@ func _on_inimigo_saiu() -> void:
 		ativar_porta(true)
 
 func ativar_porta(ativa: bool) -> void:
-	porta.visible = ativa
-	porta.set_deferred("monitoring", ativa)
+	porta.definir_aberta(ativa)
 
 func _on_porta_player_entrou(player: Node2D) -> void:
 	if trocando:
@@ -60,7 +60,6 @@ func _on_porta_player_entrou(player: Node2D) -> void:
 	player.global_position = inicio.global_position
 	quantidade += 1
 	sala += 1
-	atualizar_contador_sala()
 	iniciar_rodada()
 
 	# fade in (clareia)
@@ -71,8 +70,6 @@ func _on_porta_player_entrou(player: Node2D) -> void:
 	player.set_physics_process(true)
 	trocando = false
 
-func atualizar_contador_sala() -> void:
-	label_salas.text = "Salas: " + str(sala)
 
 
 func _on_player_shoot(pos: Vector2, dir: Vector2) -> void:
@@ -82,7 +79,7 @@ func _on_player_shoot(pos: Vector2, dir: Vector2) -> void:
 
 
 func _on_player_dano(vida: int) -> void:
-	label_dano.text = "Vida: " + str(vida) 
+	label_dano.text = "Vida: " + str(vida)
 
 func _on_inimigo_nasceu(inimigo: Node2D) -> void:
 	inimigo.tree_exited.connect(_on_inimigo_saiu)

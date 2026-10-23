@@ -1,53 +1,76 @@
-78098b89c88a74ebe8c20117b8754620
-::res://::1792590168
-README.md::TextFile::-1::1792580645::0::1::::<><><>0<>0<><>::
-::res://assets/::1792580645
-::res://assets/bala/::1792580645
-bittersweet memories.jpeg::CompressedTexture2D::4683912682310646697::1792580645::1792580645::1::::<><><>0<>0<>e11104b80a45c7e05d610fe08a7e4cb8<>res://.godot/imported/bittersweet memories.jpeg-1137b8881924832bcde005cd8a65e01b.ctex::
-osso.webp::CompressedTexture2D::257023943655866621::1792580645::1792580645::1::::<><><>0<>0<>a3cfdb77dca0addf769d8c6f516973de<>res://.godot/imported/osso.webp-630b6c83f6f9df010118e0c05969b171.ctex::
-projeteis sangue.webp::CompressedTexture2D::6231187787299893741::1792580645::1792580645::1::::<><><>0<>0<>471393ef80f5c524bab88202571a9fb7<>res://.godot/imported/projeteis sangue.webp-88d7e81ff6b50a1033fa459f7b73b40c.ctex::
-projeteis.webp::CompressedTexture2D::3365558434685947454::1792580645::1792580645::1::::<><><>0<>0<>bcaa173fe3cfab2463c1c071bb486c8c<>res://.godot/imported/projeteis.webp-fb4c9de8915238e11987145b618f5cce.ctex::
-::res://assets/cura/::1792580645
-cura.webp::CompressedTexture2D::1757587115648821742::1792580645::1792580645::1::::<><><>0<>0<>c536e70eec8728b7f8f31f0573301f68<>res://.godot/imported/cura.webp-174c4355e4a93b9579fa60157c911a7d.ctex::
-::res://assets/inimigos/::1792580645
-::res://assets/inimigos/esqueleto/::1792580645
-eisque_leto_kkj atira.webp::CompressedTexture2D::8741554679301774698::1792580645::1792580645::1::::<><><>0<>0<>d2960bfbd88d6942b6cc3d25ab814e7e<>res://.godot/imported/eisque_leto_kkj atira.webp-c16985d3e8618f73de07bac189c489b7.ctex::
-eisque_leto_kkj die.webp::CompressedTexture2D::2459397606342187538::1792580645::1792580645::1::::<><><>0<>0<>fac8299143a832aac6ab73a2b9e189be<>res://.godot/imported/eisque_leto_kkj die.webp-56e7585728012faf35dc9294b5d01eba.ctex::
-eisque_leto_kkj.webp::CompressedTexture2D::2086850060321386650::1792580645::1792580645::1::::<><><>0<>0<>2f9cb3c763e6ec32f63823c943255104<>res://.godot/imported/eisque_leto_kkj.webp-a9a241d33d2c641c332dbe6b9dad0937.ctex::
-Sans2.webp::CompressedTexture2D::3129407943635519485::1792580645::1792580645::1::::<><><>0<>0<>e1fa7e01ae3db70bc5992e14222ec954<>res://.godot/imported/Sans2.webp-ddd0aa5ad9d99be8ea2afe82eef3dec7.ctex::
-sans.png::CompressedTexture2D::1185022462885363754::1792580645::1792580645::1::::<><><>0<>0<>3b8b8cc08f545b15c15385ab333d94ad<>res://.godot/imported/sans.png-4de76034e49452ce4afa6bcd98256196.ctex::
-::res://assets/inimigos/fantasminhas/::1792580645
-fantasma.png::CompressedTexture2D::1205153395605994193::1792580645::1792580645::1::::<><><>0<>0<>d977721d5a967dbeec5b75e2dc38f97f<>res://.godot/imported/fantasma.png-fc7e2bc3def06a9a8f9beb6e91ed9fbb.ctex::
-::res://assets/partes do corpo/::1792580645
-mao.png::CompressedTexture2D::3858691352181918200::1792580645::1792580645::1::::<><><>0<>0<>ec86287724dff363e743a4402f36c985<>res://.godot/imported/mao.png-10ba9d0fba9c94dee6fbfd6ec9ba7e89.ctex::
-maos_kkj.png::CompressedTexture2D::4853036326915247539::1792580645::1792580645::1::::<><><>0<>0<>98b0ca41b0594c2e5a8825670d2abb7b<>res://.godot/imported/maos_kkj.png-73fcf6b4546d4e1058d589dc5e6eb208.ctex::
-::res://assets/player/::1792580645
-bob hit.webp::CompressedTexture2D::808754018641293337::1792580645::1792580645::1::::<><><>0<>0<>8f453c843b49220150503da9ddf19d39<>res://.godot/imported/bob hit.webp-ddae9b4fa22b92d166d6d4390704a107.ctex::
-bob.webp::CompressedTexture2D::7890951228326041132::1792580645::1792580645::1::::<><><>0<>0<>b74e712f008ecd22bf035fa1c4ace973<>res://.godot/imported/bob.webp-7ee766c77def90c876710d52c208531e.ctex::
-::res://scenes/::1792580700
-bala.tscn::PackedScene::1095343387180576401::1792580645::0::1::::<><><>0<>0<><>::uid://dbo0lr31redrc::::res://script/bala.gd<>uid://bn7kixuh30qtq::::res://assets/bala/projeteis.webp
-bala_sangue.tscn::PackedScene::7659649228878024128::1792580645::0::1::::<><><>0<>0<><>::uid://dbo0lr31redrc::::res://script/bala.gd<>uid://b7y6mfleg25ur::::res://assets/bala/bittersweet memories.jpeg
-boss.tscn::PackedScene::1494278359174493124::1792580645::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://bn7epmknmblap::::res://script/boss.gd<>uid://puue7i5v5bh6::::res://scenes/bala.tscn
-cura.tscn::PackedScene::2857740893705683306::1792580645::0::1::::<><><>0<>0<><>::uid://cks78eq0fbv5g::::res://script/cura.gd<>uid://bn7kixuh30qtq::::res://assets/bala/projeteis.webp
-esqueleto.tscn::PackedScene::5868311061367685350::1792580645::0::1::::<><><>0<>0<><>::uid://c1svklrav4d6b::::res://script/esqueleto.gd<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn<>uid://4y5d6vtvfvfe::::res://assets/inimigos/esqueleto/eisque_leto_kkj.webp<>uid://dwsqempchh2ru::::res://assets/inimigos/esqueleto/eisque_leto_kkj atira.webp
-esqueleto_escudo.tscn::PackedScene::6715551748557928528::1792580645::0::1::::<><><>0<>0<><>::uid://c4cvh4n7e72fg::::res://script/esqueleto_escudo.gd<>uid://bkt55kyhf7udx::::res://assets/inimigos/esqueleto/Sans2.webp<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn
-fantasma.tscn::PackedScene::3932337111771990412::1792580645::0::1::::<><><>0<>0<><>::uid://6xdaja2mhhvc::::res://script/fantasma.gd
-fantasminha.tscn::PackedScene::4398531672700172586::1792580645::0::1::::<><><>0<>0<><>::uid://rf1x2utuv610::::res://assets/inimigos/fantasminhas/fantasma.png<>uid://by8fofgjt05f::::res://script/fantasminha.gd<>uid://bgyktsxy0lara::::res://scenes/cura.tscn
-game.tscn::PackedScene::363023252303796330::1792580700::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://cs7l5ekaml1el::::res://script/game.gd<>uid://c2xcfkrdlgbj1::::res://scenes/esqueleto_escudo.tscn<>uid://cpuwhxbhxyr7s::::res://scenes/esqueleto.tscn<>uid://b3wxf6frwap6q::::res://scenes/fantasminha.tscn<>uid://518x7j1kh4ol::::res://scenes/porta.tscn<>uid://cudmo625v2f03::::res://script/spawn.gd<>uid://bwa4auqbq7bg3::::res://scenes/fantasma.tscn
-mao.tscn::PackedScene::960036814907905339::1792580645::0::1::::<><><>0<>0<><>::uid://cbe32f7nasr68::::res://assets/partes do corpo/maos_kkj.png
-ossinho.tscn::PackedScene::5208920106652121240::1792580645::0::1::::<><><>0<>0<><>::uid://cixjq8tvo3bba::::res://script/ossinho.gd<>uid://dwre8x3t4w7n::::res://assets/bala/osso.webp
-player.tscn::PackedScene::5498032152394320004::1792580645::0::1::::<><><>0<>0<><>::uid://lsu3kllj4wpj::::res://script/player.gd<>uid://dkoo2w2qsyyi3::::res://assets/player/bob.webp<>uid://cbe32f7nasr68::::res://assets/partes do corpo/maos_kkj.png
-porta.tscn::PackedScene::2161385560613069491::1792580645::0::1::::<><><>0<>0<><>::uid://dahux4kyr613v::::res://script/porta.gd
-::res://script/::1792580645
-bala.gd::GDScript::7259890689181963968::1792580645::0::1::::<>Area2D<><>0<>0<><>::
-boss.gd::GDScript::3365206040332068643::1792580645::0::1::::<>Node2D<><>0<>0<><>::
-cura.gd::GDScript::5513890714259893454::1792580645::0::1::::<>Area2D<><>0<>0<><>::
-esqueleto.gd::GDScript::6636203620382998819::1792580645::0::1::::<>CharacterBody2D<><>0<>0<><>::
-esqueleto_escudo.gd::GDScript::6813735690522870428::1792580645::0::1::::<>CharacterBody2D<><>0<>0<><>::
-fantasma.gd::GDScript::2223517466053905856::1792580645::0::1::::<>CharacterBody2D<><>0<>0<><>::
-fantasminha.gd::GDScript::121747242802625165::1792580645::0::1::::<>CharacterBody2D<><>0<>0<><>::
-game.gd::GDScript::6103022327296219155::1792580645::0::1::::<>Node2D<><>0<>0<><>::
-ossinho.gd::GDScript::5382409594067005510::1792580645::0::1::::<>Area2D<><>0<>0<><>::
-player.gd::GDScript::810500964415431031::1792580645::0::1::::<>CharacterBody2D<><>0<>0<><>::
-porta.gd::GDScript::7174969648212479165::1792580645::0::1::::<>Area2D<><>0<>0<><>::
-spawn.gd::GDScript::6183566649762662570::1792580645::0::1::::SpawnPontos<>Node2D<><>0<>0<><>::
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1792735362
+README.md::TextFile::-1::1792687260::0::1::::<><><>0<>0<><>::
+::res://assets/::1792705910
+::res://assets/bala/::1792687260
+bittersweet memories.jpeg::CompressedTexture2D::4683912682310646697::1792687260::1792687260::1::::<><><>0<>0<>e11104b80a45c7e05d610fe08a7e4cb8<>res://.godot/imported/bittersweet memories.jpeg-1137b8881924832bcde005cd8a65e01b.ctex::
+osso.webp::CompressedTexture2D::257023943655866621::1792687260::1792687260::1::::<><><>0<>0<>a3cfdb77dca0addf769d8c6f516973de<>res://.godot/imported/osso.webp-630b6c83f6f9df010118e0c05969b171.ctex::
+projeteis sangue.webp::CompressedTexture2D::6231187787299893741::1792687260::1792687260::1::::<><><>0<>0<>471393ef80f5c524bab88202571a9fb7<>res://.godot/imported/projeteis sangue.webp-88d7e81ff6b50a1033fa459f7b73b40c.ctex::
+projeteis.webp::CompressedTexture2D::3365558434685947454::1792687260::1792687260::1::::<><><>0<>0<>bcaa173fe3cfab2463c1c071bb486c8c<>res://.godot/imported/projeteis.webp-fb4c9de8915238e11987145b618f5cce.ctex::
+::res://assets/cenario/::1792698009
+game_do_nycolas.webp::CompressedTexture2D::1655457868730966926::1792627840::1792687650::1::::<><><>0<>0<>a357884db99cf00ab36f7c3301d20e87<>res://.godot/imported/game_do_nycolas.webp-028d53672e4ab09ce5606b629e62851a.ctex::
+numeros_legais.webp::CompressedTexture2D::1942480944871812243::1792697901::1792698009::1::::<><><>0<>0<>d5b74ad073a03424b8f19fcd966ce9d3<>res://.godot/imported/numeros_legais.webp-5e30430c5f7f67c5e7f2b52d9645dcc9.ctex::
+parede_de_baixo.webp::CompressedTexture2D::6355766695487717130::1792698000::1792698009::1::::<><><>0<>0<>5ca46179b2ed727002cebf6fb10e4cc5<>res://.godot/imported/parede_de_baixo.webp-480bea78476206a02ea1c41c44d1e2ba.ctex::
+pedras_e_outros (1).webp::CompressedTexture2D::2036836174669858660::1792627873::1792687650::1::::<><><>0<>0<>cf63b3d44362d541bdc8b4a5822a02c7<>res://.godot/imported/pedras_e_outros (1).webp-e4733fc745499b15902a440e77cd5a35.ctex::
+pedras_e_outros.webp::CompressedTexture2D::1822817697074015484::1792627864::1792687650::1::::<><><>0<>0<>3c6a22f319eb8532682182940f6dadc2<>res://.godot/imported/pedras_e_outros.webp-9fee1771fd76b67c74323cea891a63f3.ctex::
+ponto_de_spawn.webp::CompressedTexture2D::5581433167963781568::1792687931::1792687968::1::::<><><>0<>0<>a51e5a63b0c4f83f89bb118888cc80b1<>res://.godot/imported/ponto_de_spawn.webp-f3ec22e8ac6db50b7c99137e9d7b44fc.ctex::
+porta_baixo_aberta.webp::CompressedTexture2D::38789628643017183::1792687670::1792687968::1::::<><><>0<>0<>149323b6830d59ca7d5a155ac25188f5<>res://.godot/imported/porta_baixo_aberta.webp-9cf2f45fd57eaaec455f9a8c3e59039c.ctex::
+porta_baixo_fechada.webp::CompressedTexture2D::6755567352999957433::1792687684::1792687967::1::::<><><>0<>0<>1f2448f017507080f196bd20531564f9<>res://.godot/imported/porta_baixo_fechada.webp-2a45a29d8cff124b13dd11d78ed21477.ctex::
+porta_cima_aberta.webp::CompressedTexture2D::1005832927408818639::1792687705::1792687967::1::::<><><>0<>0<>ba82abd7b81a16fa46cc031633c8d921<>res://.godot/imported/porta_cima_aberta.webp-4fe488f692cad8001279d1bb09fb2db0.ctex::
+porta_cima_fechada.webp::CompressedTexture2D::5723597984379162035::1792687693::1792687967::1::::<><><>0<>0<>5368984555b6be69a5ba9f0f52a387a8<>res://.godot/imported/porta_cima_fechada.webp-82d194b3a5e2798f5abf435d0d7038fe.ctex::
+::res://assets/cura/::1792687968
+cura.webp::CompressedTexture2D::1757587115648821742::1792687260::1792687260::1::::<><><>0<>0<>c536e70eec8728b7f8f31f0573301f68<>res://.godot/imported/cura.webp-174c4355e4a93b9579fa60157c911a7d.ctex::
+item_cura.webp::CompressedTexture2D::2587582886981549499::1792687946::1792687968::1::::<><><>0<>0<>260f51dd7490779aeef2d16de8c10ed3<>res://.godot/imported/item_cura.webp-5e98c909ae804166ed2e8317852e3744.ctex::
+::res://assets/escudo/::1792687968
+escudo (1).webp::CompressedTexture2D::2979436088068354021::1792687883::1792687967::1::::<><><>0<>0<>6b76bd4729d24083334536c474cf2f25<>res://.godot/imported/escudo (1).webp-3c35692e13fd016cf42908b97d21c65e.ctex::
+escudo (2).webp::CompressedTexture2D::1425554422638599058::1792687909::1792687967::1::::<><><>0<>0<>7dd309340b0baca99dbdc71fb60b9340<>res://.godot/imported/escudo (2).webp-31084a136e82ec1e98f4c041b9864cb9.ctex::
+escudo (3).webp::CompressedTexture2D::5871677303879999437::1792687922::1792687968::1::::<><><>0<>0<>cb84f21d25e93e1affe13d5c595acb4a<>res://.godot/imported/escudo (3).webp-368a114d69da58afed7836c41c051ed5.ctex::
+escudo.webp::CompressedTexture2D::7695284296666487301::1792687842::1792687967::1::::<><><>0<>0<>a215515ff170feb4441568a899c1e100<>res://.godot/imported/escudo.webp-5c9cdacc8eaa22fa1f38eaea9390050a.ctex::
+::res://assets/inimigos/::1792687260
+::res://assets/inimigos/esqueleto/::1792687968
+eisque_leto_escudo_kkj die.webp::CompressedTexture2D::6787589481598907387::1792687806::1792687968::1::::<><><>0<>0<>b860254c5db78e19b3981e2a2bd70056<>res://.godot/imported/eisque_leto_escudo_kkj die.webp-17e6ac24f621099d2befdbd0deb5786d.ctex::
+eisque_leto_escudo_kkj.webp::CompressedTexture2D::4836925326292240117::1792687759::1792687968::1::::<><><>0<>0<>d49eb293486164a9e8c9aae0794d1823<>res://.godot/imported/eisque_leto_escudo_kkj.webp-e4bf33c44afbd95a52645ea03b4d36df.ctex::
+eisque_leto_kkj atira.webp::CompressedTexture2D::8741554679301774698::1792687260::1792687260::1::::<><><>0<>0<>d2960bfbd88d6942b6cc3d25ab814e7e<>res://.godot/imported/eisque_leto_kkj atira.webp-c16985d3e8618f73de07bac189c489b7.ctex::
+eisque_leto_kkj die.webp::CompressedTexture2D::2459397606342187538::1792687260::1792687260::1::::<><><>0<>0<>fac8299143a832aac6ab73a2b9e189be<>res://.godot/imported/eisque_leto_kkj die.webp-56e7585728012faf35dc9294b5d01eba.ctex::
+eisque_leto_kkj.webp::CompressedTexture2D::2086850060321386650::1792687260::1792687260::1::::<><><>0<>0<>2f9cb3c763e6ec32f63823c943255104<>res://.godot/imported/eisque_leto_kkj.webp-a9a241d33d2c641c332dbe6b9dad0937.ctex::
+Sans2.webp::CompressedTexture2D::3129407943635519485::1792687260::1792687260::1::::<><><>0<>0<>e1fa7e01ae3db70bc5992e14222ec954<>res://.godot/imported/Sans2.webp-ddd0aa5ad9d99be8ea2afe82eef3dec7.ctex::
+sans.png::CompressedTexture2D::1185022462885363754::1792687260::1792687260::1::::<><><>0<>0<>3b8b8cc08f545b15c15385ab333d94ad<>res://.godot/imported/sans.png-4de76034e49452ce4afa6bcd98256196.ctex::
+::res://assets/inimigos/fantasminhas/::1792687260
+fantasma.png::CompressedTexture2D::1205153395605994193::1792687260::1792687260::1::::<><><>0<>0<>d977721d5a967dbeec5b75e2dc38f97f<>res://.godot/imported/fantasma.png-fc7e2bc3def06a9a8f9beb6e91ed9fbb.ctex::
+::res://assets/partes do corpo/::1792687260
+mao.png::CompressedTexture2D::3858691352181918200::1792687260::1792687260::1::::<><><>0<>0<>ec86287724dff363e743a4402f36c985<>res://.godot/imported/mao.png-10ba9d0fba9c94dee6fbfd6ec9ba7e89.ctex::
+maos_kkj.png::CompressedTexture2D::4853036326915247539::1792687260::1792687260::1::::<><><>0<>0<>98b0ca41b0594c2e5a8825670d2abb7b<>res://.godot/imported/maos_kkj.png-73fcf6b4546d4e1058d589dc5e6eb208.ctex::
+::res://assets/player/::1792687260
+bob hit.webp::CompressedTexture2D::808754018641293337::1792687260::1792687260::1::::<><><>0<>0<>8f453c843b49220150503da9ddf19d39<>res://.godot/imported/bob hit.webp-ddae9b4fa22b92d166d6d4390704a107.ctex::
+bob.webp::CompressedTexture2D::7890951228326041132::1792687260::1792687260::1::::<><><>0<>0<>b74e712f008ecd22bf035fa1c4ace973<>res://.godot/imported/bob.webp-7ee766c77def90c876710d52c208531e.ctex::
+::res://assets/spriteframes/::1792705912
+new_sprite_frames.tres::SpriteFrames::152189772447341751::1792705912::0::1::::<><><>0<>0<><>::uid://clrxnhqer1kfo::::res://assets/cenario/ponto_de_spawn.webp
+::res://scenes/::1792710583
+bala.tscn::PackedScene::1095343387180576401::1792687260::0::1::::<><><>0<>0<><>::uid://dbo0lr31redrc::::res://script/bala.gd<>uid://bn7kixuh30qtq::::res://assets/bala/projeteis.webp
+bala_sangue.tscn::PackedScene::7659649228878024128::1792687260::0::1::::<><><>0<>0<><>::uid://dbo0lr31redrc::::res://script/bala.gd<>uid://b7y6mfleg25ur::::res://assets/bala/bittersweet memories.jpeg
+boss.tscn::PackedScene::1494278359174493124::1792687260::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://bn7epmknmblap::::res://script/boss.gd<>uid://puue7i5v5bh6::::res://scenes/bala.tscn
+cura.tscn::PackedScene::2857740893705683306::1792692113::0::1::::<><><>0<>0<><>::uid://cks78eq0fbv5g::::res://script/cura.gd<>uid://bc4pd2t5t60i6::::res://assets/cura/item_cura.webp
+esqueleto.tscn::PackedScene::5868311061367685350::1792687260::0::1::::<><><>0<>0<><>::uid://c1svklrav4d6b::::res://script/esqueleto.gd<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn<>uid://4y5d6vtvfvfe::::res://assets/inimigos/esqueleto/eisque_leto_kkj.webp<>uid://dwsqempchh2ru::::res://assets/inimigos/esqueleto/eisque_leto_kkj atira.webp
+esqueleto_escudo.tscn::PackedScene::6715551748557928528::1792710583::0::1::::<><><>0<>0<><>::uid://c4cvh4n7e72fg::::res://script/esqueleto_escudo.gd<>uid://cghifham4fuvg::::res://scenes/ossinho.tscn<>uid://ca6bpogay1trx::::res://assets/inimigos/esqueleto/eisque_leto_escudo_kkj.webp
+fantasma.tscn::PackedScene::3932337111771990412::1792687260::0::1::::<><><>0<>0<><>::uid://6xdaja2mhhvc::::res://script/fantasma.gd
+fantasminha.tscn::PackedScene::4398531672700172586::1792703409::0::1::::<><><>0<>0<><>::uid://rf1x2utuv610::::res://assets/inimigos/fantasminhas/fantasma.png<>uid://by8fofgjt05f::::res://script/fantasminha.gd<>uid://bgyktsxy0lara::::res://scenes/cura.tscn
+game.tscn::PackedScene::363023252303796330::1792707510::0::1::::<><><>0<>0<><>::uid://cklj1y631lbrg::::res://scenes/player.tscn<>uid://cs7l5ekaml1el::::res://script/game.gd<>uid://c2xcfkrdlgbj1::::res://scenes/esqueleto_escudo.tscn<>uid://cpuwhxbhxyr7s::::res://scenes/esqueleto.tscn<>uid://b3wxf6frwap6q::::res://scenes/fantasminha.tscn<>uid://xt6fcro4owwk::::res://assets/cenario/game_do_nycolas.webp<>uid://518x7j1kh4ol::::res://scenes/porta.tscn<>uid://cudmo625v2f03::::res://script/spawn.gd<>uid://cws1swrnrtgg5::::res://assets/cenario/parede_de_baixo.webp<>uid://8hsymyqambm5::::res://scenes/numero.tscn<>uid://bwa4auqbq7bg3::::res://scenes/fantasma.tscn<>uid://cnss275qbpea2::::res://assets/cenario/porta_cima_fechada.webp<>uid://cfysqcscouax::::res://assets/spriteframes/new_sprite_frames.tres
+mao.tscn::PackedScene::960036814907905339::1792687260::0::1::::<><><>0<>0<><>::uid://cbe32f7nasr68::::res://assets/partes do corpo/maos_kkj.png
+numero.tscn::PackedScene::2331818917339948698::1792704922::0::1::::<><><>0<>0<><>::uid://2w7m3h3ponb4::::res://assets/cenario/numeros_legais.webp<>uid://cf2iwis6txsn4::::res://script/numero.gd
+ossinho.tscn::PackedScene::5208920106652121240::1792687260::0::1::::<><><>0<>0<><>::uid://cixjq8tvo3bba::::res://script/ossinho.gd<>uid://dwre8x3t4w7n::::res://assets/bala/osso.webp
+player.tscn::PackedScene::5498032152394320004::1792710236::0::1::::<><><>0<>0<><>::uid://lsu3kllj4wpj::::res://script/player.gd<>uid://dkoo2w2qsyyi3::::res://assets/player/bob.webp<>uid://cbe32f7nasr68::::res://assets/partes do corpo/maos_kkj.png
+porta.tscn::PackedScene::2161385560613069491::1792696176::0::1::::<><><>0<>0<><>::uid://dahux4kyr613v::::res://script/porta.gd<>uid://s14huo4jyt8::::res://assets/cenario/porta_baixo_aberta.webp<>uid://c3iphbv3xjm5v::::res://assets/cenario/porta_baixo_fechada.webp
+::res://script/::1792709838
+bala.gd::GDScript::7259890689181963968::1792687260::0::1::::<>Area2D<><>0<>0<><>::
+boss.gd::GDScript::3365206040332068643::1792687260::0::1::::<>Node2D<><>0<>0<><>::
+cura.gd::GDScript::5513890714259893454::1792687260::0::1::::<>Area2D<><>0<>0<><>::
+esqueleto.gd::GDScript::6636203620382998819::1792687260::0::1::::<>CharacterBody2D<><>0<>0<><>::
+esqueleto_escudo.gd::GDScript::6813735690522870428::1792709838::0::1::::<>CharacterBody2D<><>0<>0<><>::
+fantasma.gd::GDScript::2223517466053905856::1792687260::0::1::::<>CharacterBody2D<><>0<>0<><>::
+fantasminha.gd::GDScript::121747242802625165::1792703389::0::1::::<>CharacterBody2D<><>0<>0<><>::
+game.gd::GDScript::6103022327296219155::1792705009::0::1::::<>Node2D<><>0<>0<><>::
+numero.gd::GDScript::5180049257772111847::1792704273::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+ossinho.gd::GDScript::5382409594067005510::1792687260::0::1::::<>Area2D<><>0<>0<><>::
+player.gd::GDScript::810500964415431031::1792707923::0::1::::<>CharacterBody2D<><>0<>0<><>::
+porta.gd::GDScript::7174969648212479165::1792695937::0::1::::Porta<>Area2D<><>0<>0<><>::
+spawn.gd::GDScript::6183566649762662570::1792706629::0::1::::SpawnPontos<>Node2D<><>0<>0<><>::

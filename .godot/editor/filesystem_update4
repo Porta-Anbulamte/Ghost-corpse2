@@ -1,8 +1,1 @@
-res://scenes/game.tscn
-res://script/game.gd
-res://scenes/player.tscn
-res://script/player.gd
-res://scenes/esqueleto.tscn
-res://script/esqueleto.gd
-res://scenes/fantasminha.tscn
-res://script/fantasminha.gd
+res://script/esqueleto_escudo.gd

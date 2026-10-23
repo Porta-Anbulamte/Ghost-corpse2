@@ -28,6 +28,8 @@ func _physics_process(delta: float) -> void:
 func levar_dano(qtd: int) -> void:
 	efeito.play("dano")
 	timer.start()
+	await timer.timeout
+	efeito.play("RESET")
 	vida -= qtd
 	if vida <= 0:
 		soltar_cura()

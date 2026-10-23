@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://bgyktsxy0lara"]
 
 [ext_resource type="Script" uid="uid://cks78eq0fbv5g" path="res://script/cura.gd" id="1_ogroy"]
-[ext_resource type="Texture2D" uid="uid://bn7kixuh30qtq" path="res://assets/bala/projeteis.webp" id="2_ogroy"]
+[ext_resource type="Texture2D" uid="uid://bc4pd2t5t60i6" path="res://assets/cura/item_cura.webp" id="2_ogroy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhifj"]
 atlas = ExtResource("2_ogroy")
-region = Rect2(0, 0, 64, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ogroy"]
-atlas = ExtResource("2_ogroy")
-region = Rect2(64, 0, 64, 48)
+region = Rect2(0, 0, 99, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2obj"]
 atlas = ExtResource("2_ogroy")
-region = Rect2(128, 0, 64, 48)
+region = Rect2(99, 0, 99, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkatv"]
 atlas = ExtResource("2_ogroy")
-region = Rect2(192, 0, 64, 48)
+region = Rect2(198, 0, 99, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqt11"]
+atlas = ExtResource("2_ogroy")
+region = Rect2(297, 0, 99, 75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2obj"]
 animations = [{
@@ -26,13 +26,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_jhifj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ogroy")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_t2obj")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rkatv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqt11")
 }],
 "loop": true,
 "name": &"default",
@@ -40,19 +40,19 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4m0w8"]
-radius = 57.07889
+radius = 54.210934
 
 [node name="cura" type="Area2D" unique_id=273903459 groups=["limpavel"]]
 script = ExtResource("1_ogroy")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=729721126]
 position = Vector2(-4, -19)
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_t2obj")
 autoplay = "default"
-frame_progress = 0.07311135
+frame_progress = 0.3880016
 offset = Vector2(2, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1082589482]
-position = Vector2(0, -7)
+position = Vector2(3, -16)
+scale = Vector2(0.9943995, 1.0096661)
 shape = SubResource("CircleShape2D_4m0w8")

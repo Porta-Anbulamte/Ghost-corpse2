@@ -1,19 +1,132 @@
 [gd_scene format=3 uid="uid://c2xcfkrdlgbj1"]
 
 [ext_resource type="Script" uid="uid://c4cvh4n7e72fg" path="res://script/esqueleto_escudo.gd" id="1_n1uec"]
-[ext_resource type="Texture2D" uid="uid://bkt55kyhf7udx" path="res://assets/inimigos/esqueleto/Sans2.webp" id="2_c0wug"]
 [ext_resource type="PackedScene" uid="uid://cghifham4fuvg" path="res://scenes/ossinho.tscn" id="2_dnl80"]
+[ext_resource type="Texture2D" uid="uid://ca6bpogay1trx" path="res://assets/inimigos/esqueleto/eisque_leto_escudo_kkj.webp" id="3_dnl80"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukqwt"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(0, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g8va"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(112, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq52f"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(224, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1ouu"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(336, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ognfr"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(448, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa48j"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(560, 0, 112, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs7ta"]
+atlas = ExtResource("3_dnl80")
+region = Rect2(672, 0, 112, 155)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mqy53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukqwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g8va")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq52f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1ouu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ognfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa48j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs7ta")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0wug"]
+size = Vector2(13.360247, 20)
+
+[sub_resource type="Animation" id="Animation_dnl80"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ukqwt"]
+resource_name = "dano"
+length = 0.2
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4g8va"]
+_data = {
+&"RESET": SubResource("Animation_dnl80"),
+&"dano": SubResource("Animation_ukqwt")
+}
 
 [node name="esqueleto escudo" type="CharacterBody2D" unique_id=1420861412 groups=["inimigo"]]
 script = ExtResource("1_n1uec")
 ossinho_scene = ExtResource("2_dnl80")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188307468]
-scale = Vector2(0.12, 0.12)
-texture = ExtResource("2_c0wug")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=954595760]
+clip_children = 2
+sprite_frames = SubResource("SpriteFrames_mqy53")
+autoplay = "default"
+frame_progress = 0.9976027
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=1074894742]
+offset_left = -60.0
+offset_top = -65.0
+offset_right = 58.0
+offset_bottom = 92.0
+color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674082050]
+position = Vector2(0, 9.999999)
 scale = Vector2(3.7424457, 6.1230717)
 shape = SubResource("RectangleShape2D_c0wug")
+
+[node name="efeito" type="AnimationPlayer" parent="." unique_id=1265171611]
+libraries/ = SubResource("AnimationLibrary_4g8va")
+
+[node name="Timer" type="Timer" parent="." unique_id=1330109057]
+wait_time = 0.2

@@ -1,0 +1,61 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cfysqcscouax"]
+
+[ext_resource type="Texture2D" uid="uid://clrxnhqer1kfo" path="res://assets/cenario/ponto_de_spawn.webp" id="1_fos8d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(0, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(144, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(288, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rysoc"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(432, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(576, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(720, 0, 144, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
+atlas = ExtResource("1_fos8d")
+region = Rect2(864, 0, 144, 90)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trtic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir15t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca42v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rysoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssvqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_264po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kice")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

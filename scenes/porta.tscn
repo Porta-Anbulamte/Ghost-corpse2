@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://518x7j1kh4ol"]
 
 [ext_resource type="Script" uid="uid://dahux4kyr613v" path="res://script/porta.gd" id="1_fctyj"]
+[ext_resource type="Texture2D" uid="uid://s14huo4jyt8" path="res://assets/cenario/porta_baixo_aberta.webp" id="2_hlcnn"]
+[ext_resource type="Texture2D" uid="uid://c3iphbv3xjm5v" path="res://assets/cenario/porta_baixo_fechada.webp" id="3_rwxfp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcnn"]
 
@@ -8,5 +10,14 @@
 script = ExtResource("1_fctyj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=790011533]
-scale = Vector2(5.194291, 6.10756)
+position = Vector2(-1.0000001, -12.999998)
+scale = Vector2(6.1837645, 5.2784605)
 shape = SubResource("RectangleShape2D_hlcnn")
+
+[node name="SpriteAberto" type="Sprite2D" parent="." unique_id=1761409017]
+position = Vector2(107, -26)
+texture = ExtResource("2_hlcnn")
+
+[node name="SpriteFechado" type="Sprite2D" parent="." unique_id=1817533575]
+position = Vector2(-3, 36)
+texture = ExtResource("3_rwxfp")

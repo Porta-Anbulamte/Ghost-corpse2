@@ -4,7 +4,7 @@ extends Node2D
 signal inimigo_nasceu(inimigo: Node2D)
 
 @export var atraso := 1.0
-@export var aviso_textura: Texture2D   # o desenho do aviso, você coloca depois
+@export var aviso_textura: SpriteFrames   # o desenho do aviso, você coloca depois
 @export var sala_minima_tardios := 5
 
 func pontos_sorteados(sala_atual: int) -> Array:
@@ -15,14 +15,15 @@ func pontos_sorteados(sala_atual: int) -> Array:
 	return pontos
 
 func spawnar(ponto: Node2D, cena: PackedScene) -> void:
-	var aviso: Sprite2D = null
+	var aviso: AnimatedSprite2D = null
 	if aviso_textura != null:
-		aviso = Sprite2D.new()
-		aviso.texture = aviso_textura
+		aviso = AnimatedSprite2D.new()
+		aviso.sprite_frames = aviso_textura
 		ponto.add_child(aviso)   # nasce na posição do marcador
+		aviso.play("default")
 	get_tree().create_timer(atraso).timeout.connect(_criar.bind(ponto, cena, aviso))
 
-func _criar(ponto: Node2D, cena: PackedScene, aviso: Sprite2D) -> void:
+func _criar(ponto: Node2D, cena: PackedScene, aviso: AnimatedSprite2D) -> void:
 	if is_instance_valid(aviso):
 		aviso.queue_free()
 	var inimigo := cena.instantiate() as Node2D

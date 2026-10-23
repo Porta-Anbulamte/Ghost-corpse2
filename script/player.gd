@@ -41,11 +41,11 @@ func get_input():
 		tiro = true
 
 func levar_dano(qtd: int) -> void:
+	vida -= qtd
 	effeito.play("hurt")
 	dano.emit(vida)
-	vida -= qtd
 	if vida <= 0:
-		get_tree().reload_current_scene()	
+		get_tree().reload_current_scene()
 	hurtTimer.start()
 	await hurtTimer.timeout
 	effeito.play("RESET")	

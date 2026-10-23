@@ -5,9 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://c2xcfkrdlgbj1" path="res://scenes/esqueleto_escudo.tscn" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpuwhxbhxyr7s" path="res://scenes/esqueleto.tscn" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b3wxf6frwap6q" path="res://scenes/fantasminha.tscn" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://xt6fcro4owwk" path="res://assets/cenario/game_do_nycolas.webp" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://518x7j1kh4ol" path="res://scenes/porta.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cudmo625v2f03" path="res://script/spawn.gd" id="5_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://cws1swrnrtgg5" path="res://assets/cenario/parede_de_baixo.webp" id="6_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://8hsymyqambm5" path="res://scenes/numero.tscn" id="7_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bwa4auqbq7bg3" path="res://scenes/fantasma.tscn" id="9_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://cnss275qbpea2" path="res://assets/cenario/porta_cima_fechada.webp" id="10_vtaks"]
+[ext_resource type="SpriteFrames" uid="uid://cfysqcscouax" path="res://assets/spriteframes/new_sprite_frames.tres" id="11_kvuet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
 
@@ -15,7 +20,7 @@
 
 [node name="game" type="Node2D" unique_id=1816255668 node_paths=PackedStringArray("label_salas", "label_dano", "spawns", "porta", "inicio", "fade")]
 script = ExtResource("1_yqjtg")
-label_salas = NodePath("CanvasLayer/sala")
+label_salas = NodePath("")
 label_dano = NodePath("CanvasLayer2/vida")
 inimigos_cenas = Array[PackedScene]([ExtResource("4_lbhrr"), ExtResource("3_gee14"), ExtResource("4_0tnpc")])
 spawns = NodePath("spawn")
@@ -23,10 +28,28 @@ porta = NodePath("porta")
 inicio = NodePath("inicioplayer")
 fade = NodePath("fade/Fade")
 
+[node name="GameDoNycolas" type="Sprite2D" parent="." unique_id=580838419]
+position = Vector2(576, 324)
+texture = ExtResource("5_0tnpc")
+
+[node name="PortaCimaFechada" type="Sprite2D" parent="." unique_id=1378216258]
+position = Vector2(572, 81)
+texture = ExtResource("10_vtaks")
+
+[node name="numero" parent="." unique_id=161517416 instance=ExtResource("7_dinhu")]
+position = Vector2(576, 73)
+
+[node name="player" parent="." unique_id=917031592 instance=ExtResource("1_uwrxv")]
+position = Vector2(577, 41)
+
+[node name="ParedeDeBaixo" type="Sprite2D" parent="." unique_id=1802881447]
+position = Vector2(576, 612)
+texture = ExtResource("6_kvpfn")
+
 [node name="colisao" type="Node2D" parent="." unique_id=1377144665]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="colisao" unique_id=1138860557]
-position = Vector2(-41, 321)
+position = Vector2(18.000002, 324.00003)
 scale = Vector2(0.8883219, 3.5813503)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D" unique_id=161349211]
@@ -43,7 +66,7 @@ scale = Vector2(49.48612, -1.3916192)
 shape = SubResource("RectangleShape2D_iywne")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="colisao" unique_id=324460936]
-position = Vector2(1191, 325)
+position = Vector2(1132.0001, 306)
 scale = Vector2(0.9540047, 3.5640042)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D2" unique_id=1140329328]
@@ -52,7 +75,7 @@ scale = Vector2(-4.0800004, 9.181467)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="colisao" unique_id=683792336]
-position = Vector2(583, 666.99994)
+position = Vector2(605, 600)
 scale = Vector2(1.1830887, 1.3681169)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisao/StaticBody2D4" unique_id=2128215589]
@@ -61,42 +84,30 @@ shape = SubResource("RectangleShape2D_iywne")
 
 [node name="spawn" type="Node2D" parent="." unique_id=364402683]
 script = ExtResource("5_u5sy4")
+aviso_textura = ExtResource("11_kvuet")
 
 [node name="Marker2D" type="Marker2D" parent="spawn" unique_id=1621808024]
-position = Vector2(116, 561)
+position = Vector2(160, 430)
 
 [node name="Marker2D2" type="Marker2D" parent="spawn" unique_id=115077471 groups=["spawn_tardio"]]
-position = Vector2(213, 173)
+position = Vector2(160, 190)
 
 [node name="Marker2D3" type="Marker2D" parent="spawn" unique_id=899933153 groups=["spawn_tardio"]]
-position = Vector2(969, 203)
+position = Vector2(970, 190)
 
 [node name="Marker2D4" type="Marker2D" parent="spawn" unique_id=1761977931]
-position = Vector2(1050, 572)
+position = Vector2(970, 430)
 
 [node name="Marker2D5" type="Marker2D" parent="spawn" unique_id=615087122]
-position = Vector2(574, 461)
+position = Vector2(570, 480)
 
 [node name="inicioplayer" type="Marker2D" parent="." unique_id=345563859]
 position = Vector2(575, 43)
 
-[node name="player" parent="." unique_id=917031592 instance=ExtResource("1_uwrxv")]
-position = Vector2(577, 41)
-
 [node name="bala" type="Node2D" parent="." unique_id=1481194408]
 
 [node name="porta" parent="." unique_id=1022463992 instance=ExtResource("5_iywne")]
-position = Vector2(586, 618)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1663139738]
-
-[node name="sala" type="Label" parent="CanvasLayer" unique_id=1023657877]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0.91764706, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Salas: 0"
-metadata/_edit_use_anchors_ = true
+position = Vector2(575, 620)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1258134356]
 
@@ -131,6 +142,7 @@ color = Color(0, 0, 0, 1)
 [node name="fantasma" parent="." unique_id=1412737934 instance=ExtResource("9_0tnpc")]
 position = Vector2(1738, 87)
 
-[connection signal="inimigo_nasceu" from="spawn" to="." method="_on_spawn_inimigo_nasceu"]
 [connection signal="dano" from="player" to="." method="_on_player_dano"]
 [connection signal="shoot" from="player" to="." method="_on_player_shoot"]
+[connection signal="inimigo_nasceu" from="spawn" to="." method="_on_spawn_inimigo_nasceu"]
+[connection signal="player_entrou" from="porta" to="numero" method="_on_porta_player_entrou"]

@@ -23,7 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_2kpif"]
 resource_name = "dano"
-length = 0.19999999999999998
+length = 0.2
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -68,3 +68,4 @@ shape = SubResource("RectangleShape2D_q1ioa")
 libraries/ = SubResource("AnimationLibrary_ka8p7")
 
 [node name="Timer1" type="Timer" parent="." unique_id=1080008806]
+wait_time = 0.2
